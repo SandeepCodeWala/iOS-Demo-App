@@ -1,118 +1,49 @@
 import SwiftUI
 
-struct Val: Identifiable {
-    var id: Int
-    var name: String
-    var image: String
-}
-
+// Step 2: ProfileView that will receive properties and display them
 struct ProfileView: View {
-    @State private var search: String = ""
-    @State private var array: [Val] = [] // Updated to dynamically fetch data
-    @State private var isLoading = true
-
-    var filteredArray: [Val] {
-        if search.isEmpty {
-            return array
-        } else {
-            return array.filter { $0.name.localizedCaseInsensitiveContains(search) }
-        }
-    }
+    let title: String
+    let properties: [Property]
 
     var body: some View {
-        VStack {
-            // Navigation Link Example
-        
-            // Search Field
-            CustomTextField(
-                placeholder: "Search",
-                text: $search,
-                isSecure: false
-            )
-            .padding(.vertical)
+        VStack(alignment: .leading, spacing: 20) {
+            ScrollView {
+                // Chunk the properties into rows of 2
+                let chunkedProperties = properties.chunked(into: 2)
 
-            // Loading State
-            if isLoading {
-                ProgressView("Loading...")
-            } else {
-                // List of Items
-                List {
-                    ForEach(filteredArray) { item in
-                        HStack(spacing: 10) {
-                            AsyncImage(url: URL(string: item.image)) { phase in
-                                if let image = phase.image {
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 50, height: 50)
-                                        .clipShape(Circle())
-                                } else if phase.error != nil {
-                                    // Error loading image
-                                    Color.red
-                                        .frame(width: 50, height: 50)
-                                        .clipShape(Circle())
-                                } else {
-                                    // Placeholder while loading
-                                    ProgressView()
-                                        .frame(width: 50, height: 50)
-                                }
-                            }
-                            Text(item.name)
-                                .font(.headline)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack(spacing: 15) {
+                        ForEach(properties) { property in
+                            PropertyCard(property: property)
                         }
                     }
                 }
-                .listStyle(PlainListStyle())
+              
             }
         }
-        .padding()
-        .onAppear(perform: fetchData)
-    }
-
-    // Fetch Data Function
-    private func fetchData() {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/todos/") else {
-            print("Invalid URL")
-            return
-        }
-
-        isLoading = true
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
-                return
-            }
-
-            guard let data = data else {
-                print("No data received")
-                return
-            }
-
-            do {
-                let todos = try JSONDecoder().decode([Todo].self, from: data)
-                DispatchQueue.main.async {
-                    array = todos.map {
-                        Val(id: $0.id, name: $0.title, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKGvxtr7vmYvKw_dBgBPf98isHM4Cz6REorg&s") // Dummy image URL
-                    }
-                    isLoading = false
-                }
-            } catch {
-                print("Error decoding data: \(error.localizedDescription)")
-            }
-        }.resume()
+        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
+        .background(
+            LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue.opacity(0.1)]), startPoint: .top, endPoint: .bottom)
+        )
     }
 }
 
-// Codable Struct to Decode API Response
-struct Todo: Codable, Identifiable {
-    let id: Int
-    let title: String
-    let completed: Bool
-}
+// Step 5: PropertyCard1 view for displaying each property
 
+// Step 6: ProfileView preview
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
-            .previewDevice("iPhone 14 Pro")
+        NavigationView {
+            ProfileView(
+                title: "Recently Posted",
+                properties: [
+                    Property(image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyghUkHrZsxR1GhHHAIBohnm7SPmFYYJ9QAw&s", price: "$250,000", amenities: ["2 Beds", "1 Bath", "1200 sqft", "Garage"]),
+                    Property(image: "https://st.hzcdn.com/simgs/pictures/exteriors/photoshoot-for-varija-bajaj-home-deepak-aggarwal-photography-img~d3f1ddf50c821b3a_14-3052-1-b651bb8.jpg", price: "$300,000", amenities: ["3 Beds", "2 Bath", "1500 sqft", "Pool"]),
+                    Property(image: "https://cdn.buildofy.com/projects/443731c2-e5e5-4b3e-a212-9ae14ace0dc9.jpeg", price: "$180,000", amenities: ["1 Bed", "1 Bath", "800 sqft", "Garden"]),
+                    Property(image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpStuXH1oDVnnO64iGcsR1GVXTcjTA7hyKekXLlgU03C3D2xo6c8ABIjGR-T_Njh95XA&usqp=CAU", price: "$500,000", amenities: ["4 Beds", "3 Bath", "2500 sqft", "Pool"]),
+                ]
+            )
+        }
     }
 }

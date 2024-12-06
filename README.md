@@ -1,4 +1,4 @@
-# Native iOS Demo App - Login, Signup, and Listing Screens
+# Native iOS Demo App - Real Estate App
 
 ```sh
 This is a demo iOS application showcasing key screens often required in mobile app development. The app is developed using Swift and UIKit, providing a seamless user experience with a clean and intuitive design.
@@ -22,6 +22,14 @@ Listing Screen: Displays a list of items or data in a structured and scrollable 
 ![Alt text](https://github.com/SandeepCodeWala/iOS-Demo-App/blob/master/signup.png)
 
 
-## Listing Screen 
+## Home Screen 
 
-![Alt text](https://github.com/SandeepCodeWala/iOS-Demo-App/blob/master/liswithsearch.png)
+![Alt text](https://github.com/SandeepCodeWala/iOS-Demo-App/blob/master/home.png)
+
+## Categorized Listing Screen 
+
+![Alt text](https://github.com/SandeepCodeWala/iOS-Demo-App/blob/master/allproperty.png)
+
+## Property Detail Screen 
+
+![Alt text](https://github.com/SandeepCodeWala/iOS-Demo-App/blob/master/detail.png)

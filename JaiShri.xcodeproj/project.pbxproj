@@ -19,6 +19,7 @@
 		76A631432D02A71100501E07 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631422D02A71100501E07 /* SignUpView.swift */; };
 		76A631452D02A74000501E07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631442D02A74000501E07 /* ProfileView.swift */; };
 		76A631472D02A76000501E07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631462D02A76000501E07 /* HomeView.swift */; };
+		76A631492D02E43F00501E07 /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631482D02E43F00501E07 /* PropertyDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		76A631422D02A71100501E07 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		76A631442D02A74000501E07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		76A631462D02A76000501E07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		76A631482D02E43F00501E07 /* PropertyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				76A631422D02A71100501E07 /* SignUpView.swift */,
 				76A631442D02A74000501E07 /* ProfileView.swift */,
 				76A631462D02A76000501E07 /* HomeView.swift */,
+				76A631482D02E43F00501E07 /* PropertyDetailView.swift */,
 			);
 			path = JaiShri;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				769E79762D019DDF009C3DDA /* ContentView.swift in Sources */,
 				769E79742D019DDF009C3DDA /* JaiShriApp.swift in Sources */,
 				76A631452D02A74000501E07 /* ProfileView.swift in Sources */,
+				76A631492D02E43F00501E07 /* PropertyDetailView.swift in Sources */,
 				769E799E2D019F07009C3DDA /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +449,7 @@
 				DEVELOPMENT_TEAM = QKW3L3Q95A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iOSAppDemo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -474,6 +479,7 @@
 				DEVELOPMENT_TEAM = QKW3L3Q95A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = iOSAppDemo;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
