@@ -15,10 +15,10 @@
 		769E798F2D019DE1009C3DDA /* JaiShriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E798E2D019DE1009C3DDA /* JaiShriUITests.swift */; };
 		769E79912D019DE1009C3DDA /* JaiShriUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E79902D019DE1009C3DDA /* JaiShriUITestsLaunchTests.swift */; };
 		769E799E2D019F07009C3DDA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E799D2D019F07009C3DDA /* SplashView.swift */; };
-		769E79A02D019FD3009C3DDA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E799F2D019FD3009C3DDA /* SignUpView.swift */; };
-		769E79A22D019FDE009C3DDA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E79A12D019FDE009C3DDA /* LoginView.swift */; };
-		769E79A42D019FEC009C3DDA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E79A32D019FEC009C3DDA /* ProfileView.swift */; };
-		769E79A62D01A0A8009C3DDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E79A52D01A0A8009C3DDA /* HomeView.swift */; };
+		76A631412D02A6E900501E07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631402D02A6E900501E07 /* LoginView.swift */; };
+		76A631432D02A71100501E07 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631422D02A71100501E07 /* SignUpView.swift */; };
+		76A631452D02A74000501E07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631442D02A74000501E07 /* ProfileView.swift */; };
+		76A631472D02A76000501E07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A631462D02A76000501E07 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		769E798E2D019DE1009C3DDA /* JaiShriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaiShriUITests.swift; sourceTree = "<group>"; };
 		769E79902D019DE1009C3DDA /* JaiShriUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaiShriUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		769E799D2D019F07009C3DDA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		769E799F2D019FD3009C3DDA /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = "../../IOS App Demo/myapp/SignUpView.swift"; sourceTree = "<group>"; };
-		769E79A12D019FDE009C3DDA /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "../../IOS App Demo/myapp/LoginView.swift"; sourceTree = "<group>"; };
-		769E79A32D019FEC009C3DDA /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = "../../IOS App Demo/myapp/ProfileView.swift"; sourceTree = "<group>"; };
-		769E79A52D01A0A8009C3DDA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "../../IOS App Demo/myapp/HomeView.swift"; sourceTree = "<group>"; };
+		76A631402D02A6E900501E07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		76A631422D02A71100501E07 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		76A631442D02A74000501E07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		76A631462D02A76000501E07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +104,15 @@
 		769E79722D019DDF009C3DDA /* JaiShri */ = {
 			isa = PBXGroup;
 			children = (
-				769E79A52D01A0A8009C3DDA /* HomeView.swift */,
-				769E79A32D019FEC009C3DDA /* ProfileView.swift */,
-				769E79A12D019FDE009C3DDA /* LoginView.swift */,
-				769E799F2D019FD3009C3DDA /* SignUpView.swift */,
 				769E79732D019DDF009C3DDA /* JaiShriApp.swift */,
 				769E79752D019DDF009C3DDA /* ContentView.swift */,
 				769E79772D019DE1009C3DDA /* Assets.xcassets */,
 				769E79792D019DE1009C3DDA /* Preview Content */,
 				769E799D2D019F07009C3DDA /* SplashView.swift */,
+				76A631402D02A6E900501E07 /* LoginView.swift */,
+				76A631422D02A71100501E07 /* SignUpView.swift */,
+				76A631442D02A74000501E07 /* ProfileView.swift */,
+				76A631462D02A76000501E07 /* HomeView.swift */,
 			);
 			path = JaiShri;
 			sourceTree = "<group>";
@@ -272,12 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769E79A02D019FD3009C3DDA /* SignUpView.swift in Sources */,
-				769E79A62D01A0A8009C3DDA /* HomeView.swift in Sources */,
+				76A631412D02A6E900501E07 /* LoginView.swift in Sources */,
+				76A631472D02A76000501E07 /* HomeView.swift in Sources */,
+				76A631432D02A71100501E07 /* SignUpView.swift in Sources */,
 				769E79762D019DDF009C3DDA /* ContentView.swift in Sources */,
 				769E79742D019DDF009C3DDA /* JaiShriApp.swift in Sources */,
-				769E79A22D019FDE009C3DDA /* LoginView.swift in Sources */,
-				769E79A42D019FEC009C3DDA /* ProfileView.swift in Sources */,
+				76A631452D02A74000501E07 /* ProfileView.swift in Sources */,
 				769E799E2D019F07009C3DDA /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
