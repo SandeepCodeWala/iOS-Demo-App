@@ -16,6 +16,7 @@ struct ProfileView: View {
                         ForEach(properties) { property in
                             PropertyCard(property: property)
                         }
+                       
                     }
                 }
               
